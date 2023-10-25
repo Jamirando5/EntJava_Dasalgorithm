@@ -10,23 +10,23 @@ namespace MyWebApplication.Models.ViewModel
         [Required(ErrorMessage = "*")]
         [Display(Name = "Fullname")]
         public string Fullname { get; set; }
-        
+
 
         [Required(ErrorMessage = "*")]
         [Display(Name = "Username")]
         public string Username { get; set; }
 
-       
+
         [Required(ErrorMessage = "*")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        
+
         [Required(ErrorMessage = "*")]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
-       
+
         [Required(ErrorMessage = "*")]
         [Display(Name = "Birthdate")]
         public string Birthdate { get; set; }

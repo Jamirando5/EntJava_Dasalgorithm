@@ -3468,11 +3468,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonlo\\OneDrive\\Desktop\\enjava_laboratory2\\MyWebApplication\\MyWebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\jonlo\\OneDrive\\Desktop\\entjava2\\EntJava_Dasalgorithm\\MyWebApplication.csproj",
       "projectName": "MyWebApplication",
-      "projectPath": "C:\\Users\\jonlo\\OneDrive\\Desktop\\enjava_laboratory2\\MyWebApplication\\MyWebApplication.csproj",
+      "projectPath": "C:\\Users\\jonlo\\OneDrive\\Desktop\\entjava2\\EntJava_Dasalgorithm\\MyWebApplication.csproj",
       "packagesPath": "C:\\Users\\jonlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonlo\\OneDrive\\Desktop\\enjava_laboratory2\\MyWebApplication\\obj\\",
+      "outputPath": "C:\\Users\\jonlo\\OneDrive\\Desktop\\entjava2\\EntJava_Dasalgorithm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jonlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
