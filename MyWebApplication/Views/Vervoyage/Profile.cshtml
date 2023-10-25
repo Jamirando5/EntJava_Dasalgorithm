@@ -48,7 +48,7 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <input type="hidden" id="editlist_id" />
+                    <input type="hidden" id="editId" />
                     <div class="form-group">
                         <label for="editName">List Name:</label>
                         <input type="text" class="form-control" id="editName">
@@ -80,7 +80,7 @@
 <script>
     $(document).ready(function () {
         var editModal = $(".edit-modal");
-        var editlist_id = $("#editlist_id");
+        var editId = $("#editId");
         var editName = $("#editName");
         var editDescription = $("#editDescription");
         var editVisibility = $("#editVisibility");
@@ -93,7 +93,7 @@
             var visibility = $(this).data("visibility");
 
             // Populate the modal with user data
-            editlist_id.val(list_id);
+            editId.val(list_id);
             editName.val(name);
             editDescription.val(description);
             editVisibility.val(visibility);

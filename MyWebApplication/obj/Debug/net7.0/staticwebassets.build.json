@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ucCTvl9GC9DTo51NCqfnL1UvMrE4yLCeEm2HORUNkSE=",
+  "Hash": "ZjB4djK9y5PIsLC1Fp11PK6J7AV4P2TpWuPgtEW0nd4=",
   "Source": "MyWebApplication",
   "BasePath": "_content/MyWebApplication",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\wwwroot\\images\\background.png",
+      "SourceId": "MyWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\wwwroot\\",
+      "BasePath": "_content/MyWebApplication",
+      "RelativePath": "images/background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\background.png"
+    },
+    {
+      "Identity": "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\wwwroot\\images\\logo.png",
+      "SourceId": "MyWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\wwwroot\\",
+      "BasePath": "_content/MyWebApplication",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\wwwroot\\js\\site.js",

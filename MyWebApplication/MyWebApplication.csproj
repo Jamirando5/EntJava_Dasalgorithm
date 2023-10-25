@@ -8,20 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
-=======
-    <Content Remove="Views\Home\Login Page.cshtml" />
-    <Content Remove="Views\Home\Registration Page.cshtml" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <None Include="Views\Vervoyage\Login.cshtml" />
-    <None Include="wwwroot\images\logo.png" />
-    <None Include="wwwroot\images\background.png" />
-  </ItemGroup>
-
-  <ItemGroup>
->>>>>>> 45678d1c289a87c0f2387992a7fa7e31feedbe25
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />

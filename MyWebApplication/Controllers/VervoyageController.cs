@@ -24,6 +24,10 @@ namespace MyWebApplication.Controllers
             return View();
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
         public ActionResult Profile()
         {
             VerListManager um = new VerListManager();
@@ -61,6 +65,14 @@ namespace MyWebApplication.Controllers
                 return RedirectToAction("Profile", "Vervoyage");
             }
             return View();
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Update([FromBody] VerListModel listData)
+        {
+            VerListManager um = new VerListManager();
+                um.UpdateList(listData);
+                return RedirectToAction("Profile","Vervoyage");
         }
 
     }
