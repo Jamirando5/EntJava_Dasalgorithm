@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="~\css\site.css" title="type" />
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="Home Page.html" class="logo-link">
+                <img src="~/images/logo.png" alt="" class="logo">
+            </a>
+            <a href="#">LIBRARY</a>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search a word" onkeyup="handleSearch(event)">
+            </div>
+            <a href="@Url.Action("Register", "Vervoyage")">SIGN UP</a>
+            <a href="vervoyage/Login.cshtml">LOG IN</a>
+            <a href="Profile.html" class="profile-link">
+                <img src="profile-image.jpg" alt="" class="profile-picture-navbar">
+            </a>
+        </nav>
+    </header>
+
+    <div class="centered-content">
+        <button class="learn-more-button">Learn more</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

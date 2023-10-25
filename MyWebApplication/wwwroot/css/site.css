@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../images/background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust the desired height */
+    padding: 20px 90px;
+    background: #59788E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+    .navigation a {
+        position: relative;
+        font-size: 1.5em;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        margin: 0 40px;
+    }
+
+/* Style for the logo link */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Style for the logo image */
+.logo {
+    height: 100px; /* Adjust the desired height */
+    margin-right: 50px; /* Add margin to separate the logo from other buttons */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+    .search-bar input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 300px;
+        margin-left: 30px; /* Add spacing between the icon and the input */
+    }
+
+    .search-bar button {
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #59788E;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+    .search-bar input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 300px; /* Adjust the width to your desired value */
+    }
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1)
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.learn-more-button {
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .learn-more-button:hover {
+        background-color: #34546D;
+    }
+
+/* Style the login container */
+
+.login-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style form elements */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+    .form-group label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #757575;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+        width: 250px;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: #757575;
+    }
+
+    /* Style the Login button */
+    .form-group button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #59788E;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .form-group button[type="submit"]:hover {
+            background-color: #34546D;
+        }
+
+/* Style the "Forgot Password" link */
+.forgot-password a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #757575;
+}
+
+
+/* Add your CSS for the header and navigation here */
+
+.signup-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="date"] {
+        margin-bottom: 10px;
+    }
+
+    .form-group .name-group,
+    .form-group .birthday-group {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+        .form-group .name-group input,
+        .form-group .birthday-group input {
+            width: calc(48% - 5px); /* Adjusted width and subtract 5px for spacing */
+        }
+
+        .form-group .birthday-group input {
+            margin-left: 0;
+        }
+
+    .form-group button[type="submit"] {
+        background-color: #59788E;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .form-group button[type="submit"]:hover {
+            background-color: #34546D;
+        }
+
+/* Style for the profile container */
+.profile-container {
+    background-color: #bed3e6;
+    max-width: 1900px; /* Adjust the desired width */
+    height: 300px; /* Adjust the desired height */
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    flex-direction: row; /* Change to a row-based layout */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Reduce the padding to prevent excessive spacing */
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    margin-right: 20px; /* Add margin to separate the image from text */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.profile-email {
+    color: #555;
+    margin: 0; /* Remove default margin */
+}
