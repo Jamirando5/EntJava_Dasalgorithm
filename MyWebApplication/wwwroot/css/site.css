@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('map.jpg') no-repeat;
+    background: url('../images/background.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -22,7 +22,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    height: 100px; /* Adjust the desired height */
+    padding: 20px 90px;
     background: #59788E;
     display: flex;
     justify-content: center;
@@ -43,6 +44,19 @@ header {
         font-weight: 500;
         margin: 0 40px;
     }
+
+/* Style for the logo link */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Style for the logo image */
+.logo {
+    height: 100px; /* Adjust the desired height */
+    margin-right: 50px; /* Add margin to separate the logo from other buttons */
+}
 
 .search-bar {
     display: flex;
@@ -142,7 +156,7 @@ header {
     .form-group input[type="password"] {
         width: 250px;
         padding: 10px;
-        font-size: 16px;
+        font-size: 14px;
         border: 1px solid #ddd;
         border-radius: 5px;
         color: #757575;
@@ -235,6 +249,42 @@ header {
         .form-group button[type="submit"]:hover {
             background-color: #34546D;
         }
+
+/* Style for the profile container */
+.profile-container {
+    background-color: #bed3e6;
+    max-width: 1900px; /* Adjust the desired width */
+    height: 300px; /* Adjust the desired height */
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    flex-direction: row; /* Change to a row-based layout */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Reduce the padding to prevent excessive spacing */
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    margin-right: 20px; /* Add margin to separate the image from text */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.profile-email {
+    color: #555;
+    margin: 0; /* Remove default margin */
+}
 
 .table-container {
     background-color: #cbe1f0;

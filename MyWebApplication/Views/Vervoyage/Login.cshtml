@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~\css\site.css" title="type" />
+    <!-- Add your CSS and other meta tags here -->
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="Home Page.html" class="logo-link">
+                <img src="logo.png" alt="" class="logo">
+            </a>
+            <a href="#">LIBRARY</a>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search a word" onkeyup="handleSearch(event)">
+            </div>
+            <a href="Registration Page.html">SIGN UP</a>
+            <a href="Login Page.html">LOGIN</a>
+            <a href="Profile.html" class="profile-link">
+                <img src="profile-image.jpg" alt="" class="profile-picture-navbar">
+            </a>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <form action="#" method="post"> <!-- Replace "#" with your login form action URL -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">LOGIN</button>
+            </div>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
