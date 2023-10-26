@@ -17,6 +17,7 @@ namespace MyWebApplication.Models.DB
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<SystemUsers> SystemUsers { get; set; }
         public virtual DbSet<VerUsers> VerUsers { get; set; }
+        public virtual DbSet<VerLists> VerLists { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -153,7 +154,34 @@ namespace MyWebApplication.Models.DB
                   .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
             });
+            modelBuilder.Entity<VerLists>(entity =>
+            {
+                entity.ToTable("VervoyageLists");
 
+                entity.Property(e => e.list_id)
+                .HasColumnName("list_id")
+                .HasColumnType("int");
+
+                entity.Property(e => e.Name)
+                .HasColumnName("Name")
+                .HasMaxLength(100)
+                .IsUnicode(false);
+
+                entity.Property(e => e.Description)
+                .HasColumnName("Description")
+                .HasMaxLength(300)
+                .IsUnicode(false);
+
+                entity.Property(e => e.Visibility)
+                  .HasColumnName("Visibility")
+                  .HasMaxLength(10)
+                  .IsUnicode(false);
+
+                entity.Property(e => e.Created_at)
+                  .HasColumnName("Created_at")
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            });
         }
     }
 }

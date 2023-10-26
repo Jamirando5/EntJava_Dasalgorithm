@@ -4,24 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MyWebApplication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyWebApplication.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navigation">
-            <a href="Home Page.html" class="logo-link">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand logo" asp-area="" asp-controller="Home" asp-action="Index">
                 <img src="~/images/logo.png" alt="" class="logo">
             </a>
-            <a href="#">LIBRARY</a>
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search a word" onkeyup="handleSearch(event)">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" href="#">LIBRARY</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline search-bar">
+                            <input type="text" class="form-control" id="search-input" placeholder="Search a word" onkeyup="handleSearch(event)">
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Vervoyage" asp-action="Register">SIGN UP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Vervoyage" asp-action="Login">LOG IN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Vervoyage" asp-action="Profile">PROFILE</a>
+                    </li>
+                </ul>
             </div>
-            <a href="@Url.Action("Register", "Vervoyage")">SIGN UP</a>
-            <a href="vervoyage/Login.cshtml">LOG IN</a>
-            <a href="Profile.html" class="profile-link">
-                <img src="profile-image.jpg" alt="" class="profile-picture-navbar">
-            </a>
         </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -29,7 +47,10 @@
         </main>
     </div>
 
-   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
 
