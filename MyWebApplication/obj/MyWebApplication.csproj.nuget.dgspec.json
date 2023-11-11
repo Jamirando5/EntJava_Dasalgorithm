@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\MyWebApplication.csproj": {}
+    "C:\\Users\\jonlo\\OneDrive\\Desktop\\EntjavaDasal2\\EntJava_Dasalgorithm\\MyWebApplication\\MyWebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\MyWebApplication.csproj": {
+    "C:\\Users\\jonlo\\OneDrive\\Desktop\\EntjavaDasal2\\EntJava_Dasalgorithm\\MyWebApplication\\MyWebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\MyWebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\jonlo\\OneDrive\\Desktop\\EntjavaDasal2\\EntJava_Dasalgorithm\\MyWebApplication\\MyWebApplication.csproj",
         "projectName": "MyWebApplication",
-        "projectPath": "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\MyWebApplication.csproj",
-        "packagesPath": "C:\\Users\\Arcega\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arcega\\source\\repos\\EntJava_Dasalgorithm\\MyWebApplication\\obj\\",
+        "projectPath": "C:\\Users\\jonlo\\OneDrive\\Desktop\\EntjavaDasal2\\EntJava_Dasalgorithm\\MyWebApplication\\MyWebApplication.csproj",
+        "packagesPath": "C:\\Users\\jonlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jonlo\\OneDrive\\Desktop\\EntjavaDasal2\\EntJava_Dasalgorithm\\MyWebApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Arcega\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,6 +57,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.4, )"
+            },
+            "Microsoft.Owin.Security.Cookies": {
+              "target": "Package",
+              "version": "[4.2.2, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

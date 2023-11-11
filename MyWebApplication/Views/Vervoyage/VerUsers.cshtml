@@ -3,26 +3,31 @@
     ViewBag.Title = "Vervoyage Users";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>Users List</h1>
-<div>
+
+<h1>Vervoyage Users List</h1>
+<div id="verUserListContainer">
     <span class="alert-success">@ViewBag.Message</span>
     <table class="table table-striped table-condensed table-hover">
         <thead>
             <tr>
-                <th>Username</th>
                 <th>Fullname</th>
+                <th>Username</th>
                 <th>Email</th>
+                <th>Password</th>
                 <th>Birthdate</th>
+                <th>Created At</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var i in Model.VerUsers)
+            @foreach (var user in Model.VerUsers)
             {
                 <tr>
-                    <td>@Html.DisplayFor(m => i.Username)</td>
-                    <td>@Html.DisplayFor(m => i.Fullname)</td>
-                    <td>@Html.DisplayFor(m => i.Email)</td>
-                    <td>@Html.DisplayFor(m => i.Birthdate)</td>
+                    <td>@Html.DisplayFor(m => user.Fullname)</td>
+                    <td>@Html.DisplayFor(m => user.Username)</td>
+                    <td>@Html.DisplayFor(m => user.Email)</td>
+                    <td>@Html.DisplayFor(m => user.Password)</td>
+                    <td>@Html.DisplayFor(m => user.Birthdate)</td>
+                    <td>@Html.DisplayFor(m => user.Created_at)</td>
                 </tr>
             }
         </tbody>

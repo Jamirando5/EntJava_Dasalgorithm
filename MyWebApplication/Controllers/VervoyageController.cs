@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 using MyWebApplication.Models.EntityManager;
 using MyWebApplication.Models.ViewModel;
+using MyWebApplication.Security;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace MyWebApplication.Controllers
 {
@@ -25,18 +30,6 @@ namespace MyWebApplication.Controllers
         }
 
         public ActionResult Login()
-        {
-            return View();
-        }
-        public ActionResult Profile()
-        {
-            VerListManager um = new VerListManager();
-            VerListsModel list = um.GetAllLists();
-
-            return View(list);
-        }
-
-        public ActionResult CreateList()
         {
             return View();
         }
@@ -71,10 +64,49 @@ namespace MyWebApplication.Controllers
         public async Task<ActionResult> Update([FromBody] VerListModel listData)
         {
             VerListManager um = new VerListManager();
-                um.UpdateList(listData);
-                return RedirectToAction("Profile","Vervoyage");
+            um.UpdateList(listData);
+            return RedirectToAction("Profile", "Vervoyage");
         }
 
+        [HttpPost]
+        public ActionResult LogIn(VerUserLoginModel ulm)
+        {
+            if (ModelState.IsValid)
+            {
+                VerUserManager um = new VerUserManager();
+
+                if (string.IsNullOrEmpty(ulm.Password))
+                {
+                    ModelState.AddModelError("", "The user login or password provided is incorrect.");
+                }
+                else
+                {
+                    if (um.GetUserPassword(ulm.Email).Equals(ulm.Password))
+                    {
+                        var claims = new List<Claim>
+                        {
+                            new Claim(ClaimTypes.Name, ulm.Email)
+                        };
+
+                        var userIdentity = new ClaimsIdentity(claims, "login");
+
+                        ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                        // Sign in the user using Cookie Authentication
+                        HttpContext.SignInAsync(principal);
+
+                        // Redirect to the desired action (e.g., "VerUsers")
+                        return RedirectToAction("VerUsers");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "The password provided is incorrect.");
+                    }
+                }
+            }
+
+            // If authentication fails or ModelState is invalid, redisplay the login form
+            return View();
+        }
     }
 }
-

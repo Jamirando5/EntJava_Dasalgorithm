@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using MyWebApplication.Models.EntityManager;
 using MyWebApplication.Models.ViewModel;
 
@@ -56,4 +57,3 @@ namespace MyWebApplication.Controllers
 
     }
 }
-

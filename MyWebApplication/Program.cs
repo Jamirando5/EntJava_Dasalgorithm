@@ -1,7 +1,19 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        options.SlidingExpiration = true;
+        options.AccessDeniedPath = "/Forbidden/";
+    });
+
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
@@ -18,25 +30,31 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "Account",
-    pattern: "Account/{action=Index}/{id?}", // Updated pattern for the "Account" controller.
-    defaults: new { controller = "Account" }
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "Account",
+        pattern: "Account/{action=Index}/{id?}",
+        defaults: new { controller = "Account" }
     );
 
-app.MapControllerRoute(
-    name: "Vervoyage",
-    pattern: "Vervoyage/{action=Index}/{id?}", 
-    defaults: new { controller = "Vervoyage" }
+    endpoints.MapControllerRoute(
+        name: "Vervoyage",
+        pattern: "Vervoyage/{action=Index}/{id?}",
+        defaults: new { controller = "Vervoyage" }
     );
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}",
-    defaults: new { controller = "Home" }
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}",
+        defaults: new { controller = "Home" }
     );
+
+    // Map additional endpoints as needed
+    endpoints.MapRazorPages();
+});
 
 app.Run();
-
